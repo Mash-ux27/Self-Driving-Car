@@ -1,0 +1,8 @@
+# Match the window to the full track image so it is not cropped.
+WINDOW_HEIGHT = 648
+WINDOW_WIDTH = 1152
+WINDOW_SIZE = (WINDOW_WIDTH, WINDOW_HEIGHT)
+
+CAR_WIDTH = 40
+CAR_HEIGHT = 70
+CAR_SIZE = (CAR_WIDTH,CAR_HEIGHT)

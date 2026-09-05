@@ -1,0 +1,21 @@
+# Python bytecode and cache directories.
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local virtual environments and environment files.
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Local editor and operating-system files.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and local training output.
+*.log
+training_state.npz
