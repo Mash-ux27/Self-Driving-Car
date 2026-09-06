@@ -9,7 +9,7 @@ origin_y = 300
 class Car:
 	def __init__(self):
 		# Create a vertical car shape so its heading is visible while steering.
-		self.base_image = pygame.Surface((20,36))
+		self.base_image = pygame.Surface((20,20))
 		self.base_image.fill((255,0,0))
 		self.image = self.base_image.copy()
 		self.mask = pygame.mask.from_surface(self.image)

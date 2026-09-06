@@ -32,7 +32,7 @@ fitness_trackers = [CheckpointFitness(CHECKPOINTS) for car in cars]
 
 frame_count = 0
 # Shorten each generation so more generations can be tested quickly.
-MAX_LIFESPAN = 600
+MAX_LIFESPAN = 600 
 
 while True:
     # Clear the previous frame before drawing the track and current cars.
