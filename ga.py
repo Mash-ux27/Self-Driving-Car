@@ -29,6 +29,9 @@ class Population:
 		data = np.load(path)
 		genomes = data["genomes"]
 		population = cls(len(genomes))
+		# Discard older saved brains when their genome shape differs from this network.
+		if genomes.shape[1] != population.brains[0].genome().size:
+			return population, 1, 0
 		population.brains = [Brain.from_genome(genome) for genome in genomes]
 		return population, int(data["generation"]), int(data["best_fitness"])
 

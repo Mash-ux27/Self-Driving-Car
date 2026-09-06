@@ -3,8 +3,8 @@ import numpy as np
 
 # Represents a small feedforward neural network controlled by genome weights.
 class Brain:
-	def __init__(self, input_size=5, hidden_size=8, second_hidden_size=8, output_size=2):
-		# Create random weights and biases for both processing layers and the outputs.
+	def __init__(self, input_size=5, hidden_size=32, second_hidden_size=32, output_size=2):
+		# Create random weights and biases for both 32-neuron hidden layers and outputs.
 		self.input_weights = np.random.uniform(-1, 1, (input_size, hidden_size))
 		self.first_hidden_bias = np.random.uniform(-1, 1, hidden_size)
 		self.second_layer_weights = np.random.uniform(-1, 1, (hidden_size, second_hidden_size))
@@ -34,7 +34,7 @@ class Brain:
 
 	# Build a brain by reshaping a flat genome back into network parameters.
 	@classmethod
-	def from_genome(cls, genome, input_size=5, hidden_size=8, second_hidden_size=8, output_size=2):
+	def from_genome(cls, genome, input_size=5, hidden_size=32, second_hidden_size=32, output_size=2):
 		brain = cls(input_size, hidden_size, second_hidden_size, output_size)
 		position = 0
 

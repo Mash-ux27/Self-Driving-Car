@@ -32,7 +32,7 @@ fitness_trackers = [CheckpointFitness(CHECKPOINTS) for car in cars]
 
 frame_count = 0
 # Shorten each generation so more generations can be tested quickly.
-MAX_LIFESPAN = 600 
+MAX_LIFESPAN = 600
 
 while True:
     # Clear the previous frame before drawing the track and current cars.
@@ -43,6 +43,8 @@ while True:
             population.save(SAVE_PATH, generation, best_fitness)
             pygame.quit()
             sys.exit()
+        if frame_count > MAX_LIFESPAN:
+            car.alive = False
     # Evaluate and replace the population when a generation has finished.
     if frame_count > MAX_LIFESPAN or not any(car.alive for car in cars):
         population.fitnesses = np.array([tracker.score for tracker in fitness_trackers])
